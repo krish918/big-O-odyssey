@@ -1,0 +1,9 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        seen_set: set = set()
+        for num in nums:
+            if num in seen_set: # effective O(1) operation because of hashset
+                return True
+            else:
+                seen_set.add(num)
+        return False
